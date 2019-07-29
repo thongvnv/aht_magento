@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AHT_Customer::ahtcustomer"
+             title="Customer"
+             translate="title"
+             module="AHT_Customer"
+             sortOrder="51"
+             dependsOnModule="AHT_Customer"
+             resource="AHT_Customer::ahtcustomer"/>
+
+        <add id="AHT_Customer::user"
+             title="Customer"
+             translate="title"
+             module="AHT_Customer"
+             parent="AHT_Customer::ahtcustomer"
+             sortOrder="10"
+             dependsOnModule="AHT_Customer"
+             action="ahtcustomer/user"
+             resource="AHT_Customer::user"/>
+    </menu>
+</config>

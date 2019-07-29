@@ -1,0 +1,30 @@
+<table class="table table-bordered table-striped table-hover table-reponsive scroll">
+    <thead>
+    <a href="<?= $block->getUrlBuilder()->getUrl('ahtcustomer/user/create', []); ?>" class="btn btn-primary btn-xs pull-right">
+        Create New User
+    </a>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Action</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <?php
+    $customerCollection = $block->getCustomerCollection();
+    foreach ($customerCollection as $customer) {
+        echo "<tr style=\"border: 1px solid #dddddd; text-align: left; padding: 8px;\">";
+        echo "<td>" . $customer->getId() . "</td>";
+        echo "<td>" . $customer->getName() . "</td>";
+        echo "<td>" . $customer->getEmail() . "</td>";
+        echo "<td>" . $customer->getPasswordHash() . "</td>";
+        echo "<td>" . $customer->getGender() . "</td>";
+        echo "<td><a href='" . $block->getUrlBuilder()->getUrl('ahtcustomer/user/create', ['id' => $customer->getId()]) . "'>Edit</a></td>";
+        echo "</tr>";
+    }
+    ?>
+</table>

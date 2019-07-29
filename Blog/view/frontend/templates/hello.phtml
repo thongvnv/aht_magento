@@ -1,0 +1,34 @@
+<table class="table table-bordered table-striped table-hover table-reponsive scroll">
+    <thead>
+    <a href="<?php echo $block->getBaseUrl(); ?>blog/index/create" class="btn btn-primary btn-xs pull-right">
+        Create New Post
+    </a>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Url Key</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Price</th>
+        <th>SKU</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <?php
+    $productCollection = $block->getProductCollection();
+    foreach ($productCollection as $product) {
+        echo "<tr style=\"border: 1px solid #dddddd; text-align: left; padding: 8px;\">";
+        echo "<td>" . $product->getId() . "</td>";
+        echo "<td>" . $product->getName() . "</td>";
+        echo "<td>" . $product->getUrlKey() . "</td>";
+        echo "<td><img src='" . $block->getItemImage($product->getId()) . "' width='58px'></td>";
+        echo "<td>" . $product->getDescription() . "</td>";
+        echo "<td>" . $product->getStatus() . "</td>";
+        echo "<td>" . $product->getPrice() . " USD</td>";
+        echo "<td>" . $product->getSku() . "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
