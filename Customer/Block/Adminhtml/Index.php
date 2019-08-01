@@ -1,10 +1,10 @@
 <?php
 
-namespace AHT\Customer\Block\Adminhtml;
+namespace THONGNH\Customer\Block\Adminhtml;
 
 use Magento\Backend\Block\Template;
 
-class User extends Template
+class Index extends Template
 {
     protected $_customerFactory;
     protected $_urlBuilder;

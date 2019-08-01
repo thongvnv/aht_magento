@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Model\ResourceModel;
+namespace THONGNH\Blog\Model\ResourceModel;
 
 class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

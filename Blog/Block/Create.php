@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block;
+namespace THONGNH\Blog\Block;
 
 class Create extends \Magento\Framework\View\Element\Template
 {
@@ -9,8 +9,8 @@ class Create extends \Magento\Framework\View\Element\Template
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \AHT\Blog\Model\PostFactory $postFactory,
-        \AHT\Blog\Model\PostRepository $postRepository
+        \THONGNH\Blog\Model\PostFactory $postFactory,
+        \THONGNH\Blog\Model\PostRepository $postRepository
     ) {
         parent::__construct($context);
         $this->postFactory = $postFactory;

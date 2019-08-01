@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Controller\Index;
+namespace THONGNH\Blog\Controller\Index;
 
 class Delete extends \Magento\Framework\App\Action\Action
 {
@@ -19,8 +19,8 @@ class Delete extends \Magento\Framework\App\Action\Action
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $pageFactory,
-        \AHT\Blog\Model\PostFactory $postFactory,
-        \AHT\Blog\Model\PostRepository $postRepository,
+        \THONGNH\Blog\Model\PostFactory $postFactory,
+        \THONGNH\Blog\Model\PostRepository $postRepository,
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Framework\Controller\ResultFactory $result,
         \Magento\Framework\App\Cache\TypeListInterface $cacheTypeList,

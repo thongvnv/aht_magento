@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Api\Data;
+namespace THONGNH\Blog\Api\Data;
 
 interface PostInterface
 {

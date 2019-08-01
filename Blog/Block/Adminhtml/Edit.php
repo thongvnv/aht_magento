@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block\Adminhtml;
+namespace THONGNH\Blog\Block\Adminhtml;
 
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
@@ -20,7 +20,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
     {
         $this->_objectId = 'id';
         $this->_controller = 'adminhtml';
-        $this->_blockGroup = 'AHT_Blog';
+        $this->_blockGroup = 'THONGNH_Blog';
 
         parent::_construct();
 

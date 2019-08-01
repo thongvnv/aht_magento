@@ -6,7 +6,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="AHT\Customer\Block\Adminhtml\User" template="AHT_Customer::customer.phtml"/>
+            <block class="THONGNH\Customer\Block\Adminhtml\Index" template="THONGNH_Customer::index.phtml"/>
         </referenceContainer>
     </body>
 </page>

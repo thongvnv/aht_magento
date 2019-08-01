@@ -1,10 +1,10 @@
 <?php
 
-namespace AHT\Blog\Controller\Adminhtml\Post;
+namespace THONGNH\Blog\Controller\Adminhtml\Post;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
-class Save extends \AHT\Blog\Controller\Adminhtml\Post
+class Save extends \THONGNH\Blog\Controller\Adminhtml\Post
 {
     protected $_postFactory;
     protected $_sessionFactory;
@@ -13,8 +13,8 @@ class Save extends \AHT\Blog\Controller\Adminhtml\Post
 
     public function __construct(\Magento\Backend\App\Action\Context $context,
     \Magento\Framework\Registry $coreRegistry,
-    \AHT\Blog\Model\PostRepository $postRepository,
-    \AHT\Blog\Model\PostFactory $postFactory,
+    \THONGNH\Blog\Model\PostRepository $postRepository,
+    \THONGNH\Blog\Model\PostFactory $postFactory,
     \Magento\Backend\Model\Session $sessionFactory,
     \Magento\Framework\Filesystem $filesystemFactory,
     \Magento\PageCache\Model\Cache\Type $cache)

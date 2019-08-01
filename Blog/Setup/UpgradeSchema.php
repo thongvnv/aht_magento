@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Setup;
+namespace THONGNH\Blog\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;

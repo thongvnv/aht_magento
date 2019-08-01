@@ -2,6 +2,6 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <referenceContainer name="content">
-        <block class="AHT\Blog\Block\Hello" name="blog_hello" template="AHT_Blog::hello.phtml"/>
+        <block class="THONGNH\Blog\Block\Hello" name="blog_hello" template="THONGNH_Blog::hello.phtml"/>
     </referenceContainer>
 </page>

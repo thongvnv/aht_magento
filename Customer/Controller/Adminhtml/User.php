@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Customer\Controller\Adminhtml;
+namespace THONGNH\Customer\Controller\Adminhtml;
 
 use Magento\Backend\App\Action;
 
@@ -10,7 +10,7 @@ abstract class User extends Action
     {
         $this->_view->loadLayout();
         $this->_setActiveMenu(
-            'AHT_Customer::ahtcustomer'
+            'THONGNH_Customer::ahtcustomer'
         )->_addBreadcrumb(
             __('Customer'),
             __('Customer')
@@ -20,6 +20,6 @@ abstract class User extends Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('AHT_Customer::ahtcustomer');
+        return $this->_authorization->isAllowed('THONGNH_Customer::ahtcustomer');
     }
 }

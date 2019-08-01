@@ -1,8 +1,8 @@
 <?php
 
-namespace AHT\Blog\Controller\Adminhtml\Post;
+namespace THONGNH\Blog\Controller\Adminhtml\Post;
 
-class Index extends \AHT\Blog\Controller\Adminhtml\Post
+class Index extends \THONGNH\Blog\Controller\Adminhtml\Post
 {
 
     public function execute()

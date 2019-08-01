@@ -1,52 +1,53 @@
 <?php
 
-namespace AHT\Customer\Controller\Adminhtml\User;
+namespace THONGNH\Customer\Controller\Adminhtml\User;
 
-class Edit extends \AHT\Customer\Controller\Adminhtml\User
+class Edit extends \THONGNH\Customer\Controller\Adminhtml\User
 {
     protected $_resultPageFactory;
-    protected $_storeManager;
-    protected $_customerFactory;
+    protected $_customerRepository;
     protected $_resultFactory;
+    protected $_encryptor;
+    protected $_urlBuilder;
 
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Customer\Model\CustomerFactory $customerFactory,
+        \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository,
+        \Magento\Framework\Encryption\Encryptor $encryptor,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
+        \Magento\Framework\UrlInterface $urlBuilder,
         \Magento\Framework\Controller\ResultFactory $resultFactory
     )
     {
         $this->_resultPageFactory = $resultPageFactory;
-        $this->_storeManager = $storeManager;
-        $this->_customerFactory = $customerFactory;
+        $this->_customerRepository = $customerRepository;
+        $this->_encryptor = $encryptor;
+        $this->_urlBuilder = $urlBuilder;
         $this->_resultFactory = $resultFactory;
         parent::__construct($context);
     }
 
     public function execute()
     {
-        if (isset($_POST["createbtn"])) {
-            // Get Website ID
-            $websiteId  = $this->storeManager->getWebsite()->getWebsiteId();
-
-            // Instantiate object (this is the most important part)
-            $customer   = $this->customerFactory->create();
-            $customer->setWebsiteId($websiteId);
-
+        $isEdit = $this->getRequest()->getParam("editbtn");
+        if (isset($isEdit)) {
+            $customer = $this->_customerRepository->getById($this->getRequest()->getParam("id"));
+            if ($customer == null) {
+                echo "Customer not found!";
+                exit;
+            }
             // Preparing data for new customer
-            $customer->setFirstname($_POST['firstName']);
-            $customer->setLastname($_POST['lastName']);
-            $customer->setEmail($_POST['email']);
-            $customer->setPassword($_POST['password']);
-            $customer->setGender($_POST['gender']);
+            $customer->setFirstname($this->getRequest()->getParam("firstName"));
+            $customer->setLastname($this->getRequest()->getParam("lastName"));
+            $customer->setGender($this->getRequest()->getParam("gender"));
 
             // Save data
-            $customer->save();
+            $passwordHash = $this->_encryptor->getHash($this->getRequest()->getParam("password"), true);
+            $this->_customerRepository->save($customer, $passwordHash);
 
             // Redirect
-            $resultRedirect = $this->_resultFactory->create(ResultFactory::TYPE_REDIRECT);
-            $resultRedirect->setUrl("http://127.0.0.1/magento2/admin_1sbxbt/ahtcustomer/user/index");
+            $resultRedirect = $this->_resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_REDIRECT);
+            $resultRedirect->setUrl($this->_urlBuilder->getUrl('ahtcustomer/user/index'));
             return $resultRedirect;
         }
 

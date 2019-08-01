@@ -3,14 +3,14 @@
 <acl>
     <resources>
         <resource id="Magento_Backend::admin">
-            <resource id="AHT_Customer::ahtcustomer" title="Customer" sortOrder="51">
-                <resource id="AHT_Customer::user" title="Post" sortOrder="10"/>
-                <resource id="AHT_Customer::ahtcustomer_configuration" title="Configuration" sortOrder="99" />
+            <resource id="THONGNH_Customer::ahtcustomer" title="Customer" sortOrder="51">
+                <resource id="THONGNH_Customer::user" title="Post" sortOrder="10"/>
+                <resource id="THONGNH_Customer::ahtcustomer_configuration" title="Configuration" sortOrder="99" />
             </resource>
             <resource id="Magento_Backend::stores">
                 <resource id="Magento_Backend::stores_settings">
                     <resource id="Magento_Config::config">
-                        <resource id="AHT_Customer::ahtcustomer_config" title="Customer"/>
+                        <resource id="THONGNH_Customer::ahtcustomer_config" title="Customer"/>
                     </resource>
                 </resource>
             </resource>

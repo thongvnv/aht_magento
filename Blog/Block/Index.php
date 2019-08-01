@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block;
+namespace THONGNH\Blog\Block;
 
 class Index extends \Magento\Framework\View\Element\Template
 {
@@ -9,8 +9,8 @@ class Index extends \Magento\Framework\View\Element\Template
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \AHT\Blog\Model\PostRepository $postRepository,
-        \AHT\Blog\Model\PostFactory $postFactory
+        \THONGNH\Blog\Model\PostRepository $postRepository,
+        \THONGNH\Blog\Model\PostFactory $postFactory
     ) {
         parent::__construct($context);
         $this->postFactory = $postFactory;
@@ -19,7 +19,7 @@ class Index extends \Magento\Framework\View\Element\Template
 
     public function getBlogInfo()
     {
-        return __('AHT Blog module');
+        return __('THONGNH Blog module');
     }
 
     public function getPosts()

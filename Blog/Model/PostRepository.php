@@ -1,11 +1,11 @@
 <?php
 
-namespace AHT\Blog\Model;
+namespace THONGNH\Blog\Model;
 
-use AHT\Blog\Api\Data;
-use AHT\Blog\Api\PostRepositoryInterface;
-use AHT\Blog\Model\ResourceModel\Post as ResourcePost;
-use AHT\Blog\Model\ResourceModel\Post\CollectionFactory as PostCollectionFactory;
+use THONGNH\Blog\Api\Data;
+use THONGNH\Blog\Api\PostRepositoryInterface;
+use THONGNH\Blog\Model\ResourceModel\Post as ResourcePost;
+use THONGNH\Blog\Model\ResourceModel\Post\CollectionFactory as PostCollectionFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -60,11 +60,11 @@ class PostRepository implements PostRepositoryInterface
     /**
      * Save Post data
      *
-     * @param \AHT\Blog\Api\Data\PostInterface $Post
+     * @param \THONGNH\Blog\Api\Data\PostInterface $Post
      * @return Post
      * @throws CouldNotSaveException
      */
-    public function save(\AHT\Blog\Api\Data\PostInterface $Post)
+    public function save(\THONGNH\Blog\Api\Data\PostInterface $Post)
     {
         try {
             $this->resource->save($Post);
@@ -100,11 +100,11 @@ class PostRepository implements PostRepositoryInterface
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @param \Magento\Framework\Api\SearchCriteriaInterface $criteria
-     * @return \AHT\Blog\Api\Data\PostSearchResultsInterface
+     * @return \THONGNH\Blog\Api\Data\PostSearchResultsInterface
      */
     public function getList()
     {
-        /** @var \AHT\Blog\Model\ResourceModel\Post\Collection $collection */
+        /** @var \THONGNH\Blog\Model\ResourceModel\Post\Collection $collection */
         $collection = $this->PostCollectionFactory->create();
         return $collection;
     }
@@ -112,11 +112,11 @@ class PostRepository implements PostRepositoryInterface
     /**
      * Delete Post
      *
-     * @param \AHT\Blog\Api\Data\PostInterface $Post
+     * @param \THONGNH\Blog\Api\Data\PostInterface $Post
      * @return bool
      * @throws CouldNotDeleteException
      */
-    public function delete(\AHT\Blog\Api\Data\PostInterface $Post)
+    public function delete(\THONGNH\Blog\Api\Data\PostInterface $Post)
     {
         try {
             $this->resource->delete($Post);

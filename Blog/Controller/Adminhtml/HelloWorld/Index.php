@@ -1,5 +1,5 @@
 <?php
-namespace AHT\Blog\Controller\Adminhtml\HelloWorld;
+namespace THONGNH\Blog\Controller\Adminhtml\HelloWorld;
 
 class Index extends \Magento\Backend\App\Action
 {

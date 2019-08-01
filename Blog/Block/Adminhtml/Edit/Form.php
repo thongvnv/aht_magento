@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block\Adminhtml\Edit;
+namespace THONGNH\Blog\Block\Adminhtml\Edit;
 
 class Form extends \Magento\Backend\Block\Widget\Form\Generic
 {

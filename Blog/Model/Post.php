@@ -1,8 +1,8 @@
 <?php
 
-namespace AHT\Blog\Model;
+namespace THONGNH\Blog\Model;
 
-use AHT\Blog\Api\Data\PostInterface;
+use THONGNH\Blog\Api\Data\PostInterface;
 
 class Post extends \Magento\Framework\Model\AbstractModel implements \Magento\Framework\DataObject\IdentityInterface, PostInterface
 {
@@ -14,7 +14,7 @@ class Post extends \Magento\Framework\Model\AbstractModel implements \Magento\Fr
 
     protected function _construct()
     {
-        $this->_init('AHT\Blog\Model\ResourceModel\Post');
+        $this->_init('THONGNH\Blog\Model\ResourceModel\Post');
     }
 
     public function getIdentities()

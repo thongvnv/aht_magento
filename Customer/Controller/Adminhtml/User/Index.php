@@ -1,8 +1,8 @@
 <?php
 
-namespace AHT\Customer\Controller\Adminhtml\User;
+namespace THONGNH\Customer\Controller\Adminhtml\User;
 
-class Index extends \AHT\Customer\Controller\Adminhtml\User
+class Index extends \THONGNH\Customer\Controller\Adminhtml\User
 {
     protected $_resultPageFactory;
 

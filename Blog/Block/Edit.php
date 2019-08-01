@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block;
+namespace THONGNH\Blog\Block;
 
 class Edit extends \Magento\Framework\View\Element\Template
 {
@@ -10,8 +10,8 @@ class Edit extends \Magento\Framework\View\Element\Template
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \AHT\Blog\Model\PostFactory $postFactory,
-        \AHT\Blog\Model\PostRepository $postRepository,
+        \THONGNH\Blog\Model\PostFactory $postFactory,
+        \THONGNH\Blog\Model\PostRepository $postRepository,
         \Magento\Framework\Registry $coreRegistry
     ) {
         parent::__construct($context);
@@ -22,7 +22,7 @@ class Edit extends \Magento\Framework\View\Element\Template
 
     public function getBlogInfo()
     {
-        return __('AHT Blog module');
+        return __('THONGNH Blog module');
     }
 
     public function getPost()

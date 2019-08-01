@@ -21,9 +21,9 @@
         echo "<td>" . $customer->getId() . "</td>";
         echo "<td>" . $customer->getName() . "</td>";
         echo "<td>" . $customer->getEmail() . "</td>";
-        echo "<td>" . $customer->getPasswordHash() . "</td>";
         echo "<td>" . $customer->getGender() . "</td>";
-        echo "<td><a href='" . $block->getUrlBuilder()->getUrl('ahtcustomer/user/create', ['id' => $customer->getId()]) . "'>Edit</a></td>";
+        echo "<td><a href='" . $block->getUrlBuilder()->getUrl('ahtcustomer/user/edit', ['id' => $customer->getId()]) . "'>Edit</a></td>";
+        echo "<td><a href='" . $block->getUrlBuilder()->getUrl('ahtcustomer/user/delete', ['id' => $customer->getId()]) . "'>Delete</a></td>";
         echo "</tr>";
     }
     ?>

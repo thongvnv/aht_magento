@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Block;
+namespace THONGNH\Blog\Block;
 
 class Hello extends \Magento\Framework\View\Element\Template
 {

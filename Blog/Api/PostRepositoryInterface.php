@@ -1,23 +1,23 @@
 <?php
 
-namespace AHT\Blog\Api;
+namespace THONGNH\Blog\Api;
 
 interface PostRepositoryInterface
 {
     /**
      * Save Post.
      *
-     * @param \AHT\Blog\Api\Data\PostInterface $Post
-     * @return \AHT\Blog\Api\Data\PostInterface
+     * @param \THONGNH\Blog\Api\Data\PostInterface $Post
+     * @return \THONGNH\Blog\Api\Data\PostInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function save(\AHT\Blog\Api\Data\PostInterface $Post);
+    public function save(\THONGNH\Blog\Api\Data\PostInterface $Post);
 
     /**
      * Retrieve Post.
      *
      * @param int $PostId
-     * @return \AHT\Blog\Api\Data\PostInterface
+     * @return \THONGNH\Blog\Api\Data\PostInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getById($PostId);
@@ -26,7 +26,7 @@ interface PostRepositoryInterface
      * Retrieve Posts matching the specified criteria.
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \AHT\Blog\Api\Data\PostSearchResultsInterface
+     * @return \THONGNH\Blog\Api\Data\PostSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     // public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
@@ -34,11 +34,11 @@ interface PostRepositoryInterface
     /**
      * Delete Post.
      *
-     * @param \AHT\Blog\Api\Data\PostInterface $Post
+     * @param \THONGNH\Blog\Api\Data\PostInterface $Post
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function delete(\AHT\Blog\Api\Data\PostInterface $Post);
+    public function delete(\THONGNH\Blog\Api\Data\PostInterface $Post);
 
     /**
      * Delete Post by ID.

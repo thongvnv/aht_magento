@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Model\ResourceModel\Post;
+namespace THONGNH\Blog\Model\ResourceModel\Post;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
@@ -15,6 +15,6 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      */
     protected function _construct()
     {
-        $this->_init('AHT\Blog\Model\Post', 'AHT\Blog\Model\ResourceModel\Post');
+        $this->_init('THONGNH\Blog\Model\Post', 'THONGNH\Blog\Model\ResourceModel\Post');
     }
 }

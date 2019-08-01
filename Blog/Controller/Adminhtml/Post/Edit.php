@@ -1,8 +1,8 @@
 <?php
 
-namespace AHT\Blog\Controller\Adminhtml\Post;
+namespace THONGNH\Blog\Controller\Adminhtml\Post;
 
-class Edit extends \AHT\Blog\Controller\Adminhtml\Post
+class Edit extends \THONGNH\Blog\Controller\Adminhtml\Post
 {
     protected $_coreRegistry = null;
     protected $_postRepository;
@@ -11,8 +11,8 @@ class Edit extends \AHT\Blog\Controller\Adminhtml\Post
 
     public function __construct(\Magento\Backend\App\Action\Context $context, 
     \Magento\Framework\Registry $coreRegistry, 
-    \AHT\Blog\Model\PostRepository $postRepository, 
-    \AHT\Blog\Model\PostFactory $postFactory, 
+    \THONGNH\Blog\Model\PostRepository $postRepository,
+    \THONGNH\Blog\Model\PostFactory $postFactory,
     \Magento\Backend\Model\Session $sessionFactory)
     {
         $this->_coreRegistry = $coreRegistry;
@@ -47,7 +47,7 @@ class Edit extends \AHT\Blog\Controller\Adminhtml\Post
             $id ? __('Edit %1', $model->getName()) : __('New Item'),
             $id ? __('Edit %1', $model->getName()) : __('New Item')
         )->_addContent(
-            $this->_view->getLayout()->createBlock('AHT\Blog\Block\Adminhtml\Edit')
+            $this->_view->getLayout()->createBlock('THONGNH\Blog\Block\Adminhtml\Edit')
         );
         $this->_view->getPage()->getConfig()->getTitle()->prepend(__('Posts'));
         $this->_view->getPage()->getConfig()->getTitle()->prepend(

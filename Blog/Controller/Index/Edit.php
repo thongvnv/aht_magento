@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Controller\Index;
+namespace THONGNH\Blog\Controller\Index;
 
 class Edit extends \Magento\Framework\App\Action\Action
 {
@@ -15,8 +15,8 @@ class Edit extends \Magento\Framework\App\Action\Action
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $pageFactory,
-        \AHT\Blog\Model\PostFactory $postFactory,
-        \AHT\Blog\Model\PostRepository $postRepository,
+        \THONGNH\Blog\Model\PostFactory $postFactory,
+        \THONGNH\Blog\Model\PostRepository $postRepository,
         \Magento\Framework\Registry $coreRegistry
     ) {
         $this->_pageFactory = $pageFactory;

@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Setup;
+namespace THONGNH\Blog\Setup;
 
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
 {

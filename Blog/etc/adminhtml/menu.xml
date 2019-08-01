@@ -2,51 +2,51 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="AHT_Blog::level1"
-             title="AHT"
+        <add id="THONGNH_Blog::level1"
+             title="THONGNH"
              translate="title"
-             module="AHT_Blog"
+             module="THONGNH_Blog"
              parent="Magento_Backend::content"
              sortOrder="50"
-             dependsOnModule="AHT_Blog"
-             resource="AHT_Blog::level1"/>
+             dependsOnModule="THONGNH_Blog"
+             resource="THONGNH_Blog::level1"/>
 
-        <add id="AHT_Blog::level2"
+        <add id="THONGNH_Blog::level2"
              title="Blog"
              translate="title"
-             module="AHT_Blog"
-             parent="AHT_Blog::level1"
+             module="THONGNH_Blog"
+             parent="THONGNH_Blog::level1"
              sortOrder="10"
-             dependsOnModule="AHT_Blog"
+             dependsOnModule="THONGNH_Blog"
              action="blog/index"
-             resource="AHT_Blog::level1"/>
+             resource="THONGNH_Blog::level1"/>
 
-        <add id="AHT_Blog::blog"
+        <add id="THONGNH_Blog::blog"
              title="Blog"
              translate="title"
-             module="AHT_Blog"
+             module="THONGNH_Blog"
              sortOrder="51"
-             dependsOnModule="AHT_Blog"
-             resource="AHT_Blog::blog"/>
+             dependsOnModule="THONGNH_Blog"
+             resource="THONGNH_Blog::blog"/>
 
-        <add id="AHT_Blog::post"
+        <add id="THONGNH_Blog::post"
              title="Blog"
              translate="title"
-             module="AHT_Blog"
-             parent="AHT_Blog::blog"
+             module="THONGNH_Blog"
+             parent="THONGNH_Blog::blog"
              sortOrder="10"
-             dependsOnModule="AHT_Blog"
+             dependsOnModule="THONGNH_Blog"
              action="blog/post"
-             resource="AHT_Blog::post"/>
+             resource="THONGNH_Blog::post"/>
 
-        <add id="AHT_Blog::blog_config"
+        <add id="THONGNH_Blog::blog_config"
              title="Configuration"
              translate="title"
-             module="AHT_Blog"
-             parent="AHT_Blog::blog"
+             module="THONGNH_Blog"
+             parent="THONGNH_Blog::blog"
              sortOrder="10"
-             dependsOnModule="AHT_Blog"
+             dependsOnModule="THONGNH_Blog"
              action="adminhtml/system_config/edit/section/blog"
-             resource="AHT_Blog::blog_config"/>
+             resource="THONGNH_Blog::blog_config"/>
     </menu>
 </config>

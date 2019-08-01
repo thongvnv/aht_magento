@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Controller\Adminhtml;
+namespace THONGNH\Blog\Controller\Adminhtml;
 
 use Magento\Backend\App\Action;
 
@@ -10,7 +10,7 @@ abstract class Post extends Action
     {
         $this->_view->loadLayout();
         $this->_setActiveMenu(
-            'AHT_Blog::blog'
+            'THONGNH_Blog::blog'
         )->_addBreadcrumb(
             __('Blog'),
             __('Blog')
@@ -20,6 +20,6 @@ abstract class Post extends Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('AHT_Blog::blog');
+        return $this->_authorization->isAllowed('THONGNH_Blog::blog');
     }
 }

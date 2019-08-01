@@ -2,22 +2,22 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="AHT_Customer::ahtcustomer"
+        <add id="THONGNH_Customer::ahtcustomer"
              title="Customer"
              translate="title"
-             module="AHT_Customer"
+             module="THONGNH_Customer"
              sortOrder="51"
-             dependsOnModule="AHT_Customer"
-             resource="AHT_Customer::ahtcustomer"/>
+             dependsOnModule="THONGNH_Customer"
+             resource="THONGNH_Customer::ahtcustomer"/>
 
-        <add id="AHT_Customer::user"
+        <add id="THONGNH_Customer::user"
              title="Customer"
              translate="title"
-             module="AHT_Customer"
-             parent="AHT_Customer::ahtcustomer"
+             module="THONGNH_Customer"
+             parent="THONGNH_Customer::ahtcustomer"
              sortOrder="10"
-             dependsOnModule="AHT_Customer"
+             dependsOnModule="THONGNH_Customer"
              action="ahtcustomer/user"
-             resource="AHT_Customer::user"/>
+             resource="THONGNH_Customer::user"/>
     </menu>
 </config>

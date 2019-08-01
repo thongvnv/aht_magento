@@ -1,15 +1,15 @@
 <?php
 
-namespace AHT\Blog\Controller\Adminhtml\Post;
+namespace THONGNH\Blog\Controller\Adminhtml\Post;
 
-class MassStatus extends \AHT\Blog\Controller\Adminhtml\Post
+class MassStatus extends \THONGNH\Blog\Controller\Adminhtml\Post
 {
     protected $_postFactory;
 
     public function __construct(\Magento\Backend\App\Action\Context $context, 
     \Magento\Framework\Registry $coreRegistry, 
-    \AHT\Blog\Model\PostRepository $postRepository, 
-    \AHT\Blog\Model\PostFactory $postFactory)
+    \THONGNH\Blog\Model\PostRepository $postRepository,
+    \THONGNH\Blog\Model\PostFactory $postFactory)
     {
         $this->_coreRegistry = $coreRegistry;
         $this->_postRepository = $postRepository;

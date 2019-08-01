@@ -1,6 +1,6 @@
 <?php
 
-namespace AHT\Blog\Controller\Index;
+namespace THONGNH\Blog\Controller\Index;
 
 class Hello extends \Magento\Framework\App\Action\Action
 {
