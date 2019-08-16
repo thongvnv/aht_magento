@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="THONGNH_ProductsInCategory::thongproduct"
+             title="Product"
+             translate="title"
+             module="THONGNH_ProductsInCategory"
+             sortOrder="52"
+             dependsOnModule="THONGNH_ProductsInCategory"
+             resource="THONGNH_ProductsInCategory::thongproduct"/>
+
+        <add id="THONGNH_ProductsInCategory::product"
+             title="Product In Category"
+             translate="title"
+             module="THONGNH_ProductsInCategory"
+             parent="THONGNH_ProductsInCategory::thongproduct"
+             sortOrder="10"
+             dependsOnModule="THONGNH_ProductsInCategory"
+             action="thongproduct/product"
+             resource="THONGNH_ProductsInCategory::product"/>
+    </menu>
+</config>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="THONGNH_Post::post"
+             title="Post"
+             translate="title"
+             module="THONGNH_Post"
+             sortOrder="51"
+             dependsOnModule="THONGNH_Post"
+             resource="THONGNH_Post::post"/>
+
+        <add id="THONGNH_Post::contact"
+             title="Contact"
+             translate="title"
+             module="THONGNH_Post"
+             parent="THONGNH_Post::post"
+             sortOrder="10"
+             dependsOnModule="THONGNH_Post"
+             action="post/index/index"
+             resource="THONGNH_Post::contact"/>
+
+        <add id="THONGNH_Post::contact_config"
+             title="Configuration"
+             translate="title"
+             module="THONGNH_Post"
+             parent="THONGNH_Post::post"
+             sortOrder="10"
+             dependsOnModule="THONGNH_Post"
+             action="adminhtml/system_config/edit/section/post"
+             resource="THONGNH_Post::contact_config"/>
+
+    </menu>
+</config>
